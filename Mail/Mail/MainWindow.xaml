@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Mail"
         mc:Ignorable="d"
         Title="Mail" Height="350" Width="525" Background="LightGray">
-    <Grid>
+    <Grid Margin="0,-15,-50,-11">
         <Border BorderBrush="Blue" BorderThickness="1" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="248"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Destination" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" Text="Receiver" VerticalAlignment="Top"/>
