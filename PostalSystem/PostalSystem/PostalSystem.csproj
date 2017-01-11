@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACA748A6-6CB5-429A-A373-77CE3BE5AD9E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PostalSystem</RootNamespace>
+    <AssemblyName>PostalSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Document\BatchOrder.cs" />
+    <Compile Include="Person\Clerk.cs" />
+    <Compile Include="Person\Courier.cs" />
+    <Compile Include="Person\Customer.cs" />
+    <Compile Include="Place\CustomerAddress.cs" />
+    <Compile Include="Document\CustomerOrder.cs" />
+    <Compile Include="Document\Document.cs" />
+    <Compile Include="Person\Employee.cs" />
+    <Compile Include="Package\Letter.cs" />
+    <Compile Include="Document\MissedDeliveryNote.cs" />
+    <Compile Include="Document\Notification.cs" />
+    <Compile Include="Package\Package.cs" />
+    <Compile Include="Package\Parcel.cs" />
+    <Compile Include="Person\Person.cs" />
+    <Compile Include="Document\PhoneCall.cs" />
+    <Compile Include="Place\Place.cs" />
+    <Compile Include="Place\PostOffice.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Person\Recipient.cs" />
+    <Compile Include="Route\RoadRoute.cs" />
+    <Compile Include="Route\Route.cs" />
+    <Compile Include="Person\Sender.cs" />
+    <Compile Include="Vehicle\Ship.cs" />
+    <Compile Include="Document\SMSNotification.cs" />
+    <Compile Include="Route\TrainRoute.cs" />
+    <Compile Include="Place\TransferHub.cs" />
+    <Compile Include="Vehicle\Train.cs" />
+    <Compile Include="Vehicle\Truck.cs" />
+    <Compile Include="Vehicle\Vehicle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
