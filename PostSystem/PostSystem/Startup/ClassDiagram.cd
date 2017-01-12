@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PostalSystem.Destination" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAEAAoAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\Destination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Domestic" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\Domestic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.International" Collapsed="true">
+    <Position X="7.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\International.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Local" Collapsed="true">
+    <Position X="9.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\Local.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Order" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACBQAAgAAAAAIAAAAAAAAAAAABAAAAAABIAAA=</HashCode>
+      <FileName>Order\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Letter" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Package\Letter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Package" Collapsed="true">
+    <Position X="14.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Package\Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Parcel" Collapsed="true">
+    <Position X="15.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Package\Parcel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Clerk" Collapsed="true">
+    <Position X="9.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Clerk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Courier" Collapsed="true">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Courier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Customer" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Employee" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Person\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Person" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Plane" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Plane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Ship" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Train" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Train.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Transportation" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Transportation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostalSystem.Truck" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Program" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="PostalSystem.Distance" Collapsed="true">
+    <Position X="17.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAQAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Distance.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
