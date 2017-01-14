@@ -32,6 +32,7 @@ namespace Startup
 
         public Order(Customer sender, Customer recipient, Employee acceptedBy, Package packageType, Destination addressToDeliver, bool urgent)
         {
+            
             this.Sender = sender;
             this.Recipient = recipient;
             this.AcceptedBy = acceptedBy;

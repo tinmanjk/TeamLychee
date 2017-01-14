@@ -8,41 +8,46 @@ namespace Startup
 {
     public abstract class Package
     {
-        private Dimensions dimensions;
+
+        private double weight;
         private bool fragile;
+        private double width;
+        private double height;
+        private double length;
         private double size;
 
-        public Package(Dimensions dimensions, bool fragile)
+        public Package(double weight, double width, double height, double length, bool fragile)
         {
-            this.Dimensions = dimensions;
+            this.Height = height;
+            this.Width = width;
+            this.Length = length;
+            this.Weight = weight;
             this.Fragile = fragile;
-        }
 
-        public Dimensions Dimensions
+        }
+        public double Weight
         {
-            get
-            {
-                return this.dimensions;
-            }
-            set
-            {
-                this.dimensions = value;
-            }
+            get; private set;
+        }
+        public double Width
+        {
+            get; private set;
+        }
+        public double Height
+        {
+            get; private set;
+        }
+        public double Length
+        {
+            get; private set;
         }
         public bool Fragile
         {
-            get
-            {
-                return this.fragile;
-            }
-            set
-            {
-                this.fragile = value;
-            }
+            get; private set;
         }
         public double Size
         {
-            get { return this.dimensions.CalculateSize(); }
+            get { return this.Width * this.Height * this.Length; }
         }
     }
 }

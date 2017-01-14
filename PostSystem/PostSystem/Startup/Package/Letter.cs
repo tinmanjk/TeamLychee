@@ -8,8 +8,8 @@ namespace Startup
 {
     public class Letter : Package
     {
-        public Letter(Dimensions dimensions, bool fragile) :
-            base(dimensions, fragile)
+        public Letter(double weight, double width, double height, double length, bool fragile) :
+            base(weight, width, height, length, fragile)
         {
         }
     }
