@@ -13,14 +13,14 @@ namespace Startup
         private double height;
         private double length;
 
-        public Dimensions(double weight, double width, double height, double length)
+        public Dimensions(double width, double height, double length, double weight)
             :this()
         {
             this.Height = height;
             this.Width = width;
             this.Length = length;
             this.Weight = weight;
-        }
+        } 
 
         public double Weight
         {
@@ -73,12 +73,12 @@ namespace Startup
 
         public double CalculateSize()
         {
-            return this.width * this.height * this.length;
+            return this.Width * this.Height * this.Length;
         }
         public string ShowDimensions()
         {
             StringBuilder sb = new StringBuilder()
-                                   .AppendFormat("W:{0}cm, H:{1}cm, L:{2}cm", this.Width, this.Height, this.Length);
+                                   .AppendFormat("Width:{0}cm, Height:{1}cm, Length:{2}cm, {3}kg", this.Width, this.Height, this.Length, this.Weight);
 
             return sb.ToString();
         }
