@@ -23,7 +23,7 @@ namespace Startup
         {
             foreach (var value in orderList)
             {
-                Console.WriteLine(value.Id);
+                Console.WriteLine(String.Format("Pkg ID:{0} | Pkg dimensions: {1} ", value.Id, value.PackageType.Dimensions.ShowDimensions()));
             }
         }
     }

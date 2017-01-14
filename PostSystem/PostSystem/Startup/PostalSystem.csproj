@@ -50,7 +50,9 @@
     <Compile Include="Destination\Distance.cs" />
     <Compile Include="Interfases\IOrder.cs" />
     <Compile Include="Interfases\IPerson.cs" />
+    <Compile Include="OrderTester.cs" />
     <Compile Include="Order\OrderList.cs" />
+    <Compile Include="Package\Dimensions.cs" />
     <Compile Include="Package\Letter.cs" />
     <Compile Include="Order\Order.cs" />
     <Compile Include="Package\Package.cs" />

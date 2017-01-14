@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Startup.Destination" Collapsed="true">
-    <Position X="9.5" Y="7.5" Width="1.5" />
+    <Position X="3" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAAAAEAAIAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Destination\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Startup.Domestic" Collapsed="true">
-    <Position X="7.25" Y="8.75" Width="1.5" />
+    <Position X="0.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Destination\Domestic.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Startup.International" Collapsed="true">
-    <Position X="9.5" Y="8.75" Width="1.5" />
+    <Position X="3" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Destination\International.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Startup.Local" Collapsed="true">
-    <Position X="11.75" Y="8.75" Width="1.5" />
+    <Position X="5.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Destination\Local.cs</FileName>
@@ -46,7 +46,7 @@
   <Class Name="Startup.Package" Collapsed="true">
     <Position X="20" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAhAAAgIQAQMAAAEBAACAAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAgAAAgIAAAoAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Package\Package.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -74,7 +74,7 @@
   <Class Name="Startup.Customer">
     <Position X="7.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Customer.cs</FileName>
     </TypeIdentifier>
   </Class>

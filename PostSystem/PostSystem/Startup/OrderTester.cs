@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Startup
 {
-    public class Letter : Package
+    public class OrderTester
     {
-        public Letter(Dimensions dimensions, bool fragile) :
-            base(dimensions, fragile)
-        {
-        }
+        // The sender
+
+        // The recepient
+
+        // 
+
     }
 }
