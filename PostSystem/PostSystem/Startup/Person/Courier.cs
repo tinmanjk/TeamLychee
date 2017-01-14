@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostalSystem
+namespace Startup
 {
-    class Courier : Employee
+    public class Courier : Employee
     {
     }
 }

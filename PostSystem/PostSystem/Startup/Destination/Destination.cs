@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostalSystem
+namespace Startup
 {
-    class Destination
+    public class Destination
     {
 
         private string Country;
 
         private string City;
 
-        private string Adress;
+        private string Address;
 
         private int AreaCode;
 

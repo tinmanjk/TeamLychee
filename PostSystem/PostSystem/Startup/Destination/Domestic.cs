@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostalSystem
+namespace Startup
 {
-    class Domestic : Destination
+    public class Domestic : Destination
     {
     }
 }

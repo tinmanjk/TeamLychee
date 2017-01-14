@@ -47,7 +47,10 @@
     <Compile Include="Destination\International.cs" />
     <Compile Include="Destination\Local.cs" />
     <Compile Include="Destination\Domestic.cs" />
-    <Compile Include="Distance.cs" />
+    <Compile Include="Destination\Distance.cs" />
+    <Compile Include="Interfases\IOrder.cs" />
+    <Compile Include="Interfases\IPerson.cs" />
+    <Compile Include="Order\OrderList.cs" />
     <Compile Include="Package\Letter.cs" />
     <Compile Include="Order\Order.cs" />
     <Compile Include="Package\Package.cs" />
@@ -57,6 +60,7 @@
     <Compile Include="Person\Customer.cs" />
     <Compile Include="Person\Employee.cs" />
     <Compile Include="Person\Person.cs" />
+    <Compile Include="Price.cs" />
     <Compile Include="Transportation\Plane.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,7 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,14 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostalSystem
+namespace Startup
 {
-    public abstract class Person
+    public abstract class Person : IPerson
     {
 
-        private string Name;
+        private string name;
 
-        private int PhoneNumber;
+        private int phoneNumber;
+
+        public string Name
+        {
+            get { return this.name; }       
+            set { this.name = value; }            //validation
+        }
+        public int PhoneNumber
+        {
+            get { return this.phoneNumber; }            
+            set { this.phoneNumber = value; }       //validation
+        }
 
     }
 }

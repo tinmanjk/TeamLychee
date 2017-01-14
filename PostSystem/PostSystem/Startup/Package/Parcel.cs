@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostalSystem
+namespace Startup
 {
-    class Parcel : Package
+    public class Parcel : Package
     {
 
 
@@ -15,5 +15,10 @@ namespace PostalSystem
         private double Height;
 
         private double Length;
+
+        public Parcel(double weight, double width, double height, double length, bool fragile) 
+            : base(weight, width, height, length, fragile)
+        {
+        }
     }
 }

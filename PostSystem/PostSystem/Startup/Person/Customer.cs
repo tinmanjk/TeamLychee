@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PostalSystem
+namespace Startup
 {
-    class Customer : Person
+    public class Customer : Person
     {
 
-        private Destination adress;
+        private Destination address;
 
+        private string email;
 
     }
 }

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Startup.Destination" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAEAAIAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\Destination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Domestic" Collapsed="true">
+    <Position X="7.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\Domestic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.International" Collapsed="true">
+    <Position X="9.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\International.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Local" Collapsed="true">
+    <Position X="11.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destination\Local.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Order" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEiDAAACBQBAggQAQIIAAAAAAAAAAAABAAAAAQAIAgA=</HashCode>
+      <FileName>Order\Order.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Startup.Letter" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Package\Letter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Package" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAhAAAgIQAQMAAAEBAACAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Package\Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Parcel" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Package\Parcel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Clerk" Collapsed="true">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Clerk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Courier" Collapsed="true">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Courier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Customer">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Employee" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Person\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Person" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAQAAEAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Startup.Program" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Plane" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Plane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Ship" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Train" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Train.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Transportation" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Transportation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Startup.Truck" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transportation\Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Startup.Price" Collapsed="true">
+    <Position X="16.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAEAIAAAACAEAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Price.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Startup.IOrder" Collapsed="true">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACBQAAgAAAAAIAAAAAAAAAAAABAAAAAAAIAAA=</HashCode>
+      <FileName>Interfases\IOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Startup.IPerson" Collapsed="true">
+    <Position X="18.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfases\IPerson.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Startup.Distance" Collapsed="true">
+    <Position X="16.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAQAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Destination\Distance.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
