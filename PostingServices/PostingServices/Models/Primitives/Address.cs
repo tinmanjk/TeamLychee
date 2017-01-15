@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PostingServices.Addresses
 {
-    public class Address
+    public class Address    //make me struct
     {
         private string city;
         private string streetName;

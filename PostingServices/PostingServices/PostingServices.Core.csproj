@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ACA748A6-6CB5-429A-A373-77CE3BE5AD9E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{DE7E0A28-B8E4-4F9A-B201-D3C33D781AF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PostalSystem</RootNamespace>
-    <AssemblyName>PostalSystem</AssemblyName>
+    <RootNamespace>PostingServices.Core</RootNamespace>
+    <AssemblyName>PostingServices.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,40 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Document\BatchOrder.cs" />
-    <Compile Include="Person\Clerk.cs" />
-    <Compile Include="Person\Courier.cs" />
-    <Compile Include="Person\Customer.cs" />
-    <Compile Include="Place\CustomerAddress.cs" />
-    <Compile Include="Document\CustomerOrder.cs" />
-    <Compile Include="Document\Document.cs" />
-    <Compile Include="Person\Employee.cs" />
-    <Compile Include="Package\Letter.cs" />
-    <Compile Include="Document\MissedDeliveryNote.cs" />
-    <Compile Include="Document\Notification.cs" />
-    <Compile Include="Package\Package.cs" />
-    <Compile Include="Package\Parcel.cs" />
-    <Compile Include="Person\Person.cs" />
-    <Compile Include="Document\PhoneCall.cs" />
-    <Compile Include="Place\Place.cs" />
-    <Compile Include="Place\PostOffice.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Infrastructure\Enumerations\DeliveryType.cs" />
+    <Compile Include="Infrastructure\Enumerations\PaperSize.cs" />
+    <Compile Include="Models\Orders\Order.cs" />
+    <Compile Include="Models\Orders\OrdersContainer.cs" />
+    <Compile Include="Models\People\Abstract\Person.cs" />
+    <Compile Include="Models\People\Receiver.cs" />
+    <Compile Include="Models\People\Sender.cs" />
+    <Compile Include="Models\PostOffices\PostOffice.cs" />
+    <Compile Include="Models\Primitives\Address.cs" />
+    <Compile Include="Models\Primitives\Dimensions.cs" />
+    <Compile Include="Models\Primitives\Location.cs" />
+    <Compile Include="Models\Shipments\Abstract\Shipment.cs" />
+    <Compile Include="Models\Shipments\Letter.cs" />
+    <Compile Include="Models\Shipments\Parcel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Person\Recipient.cs" />
-    <Compile Include="Route\RoadRoute.cs" />
-    <Compile Include="Route\Route.cs" />
-    <Compile Include="Person\Sender.cs" />
-    <Compile Include="Vehicle\Ship.cs" />
-    <Compile Include="Document\SMSNotification.cs" />
-    <Compile Include="Route\TrainRoute.cs" />
-    <Compile Include="Place\TransferHub.cs" />
-    <Compile Include="Vehicle\Train.cs" />
-    <Compile Include="Vehicle\Truck.cs" />
-    <Compile Include="Vehicle\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="Infrastructure\Constants\" />
+    <Folder Include="Infrastructure\Exceptions\" />
+    <Folder Include="Infrastructure\Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
