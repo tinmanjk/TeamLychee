@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IPackage.cs" />
+    <Compile Include="Infrastructure\Constants\CityLocations.cs" />
     <Compile Include="Infrastructure\Enumerations\DeliveryType.cs" />
     <Compile Include="Infrastructure\Enumerations\PaperSize.cs" />
     <Compile Include="Infrastructure\Utils\IDGenerator.cs" />
@@ -68,7 +70,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Infrastructure\Constants\" />
     <Folder Include="Infrastructure\Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

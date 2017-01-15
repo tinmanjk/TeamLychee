@@ -7,6 +7,8 @@ using Infrastructure.Enumerations;
 using PostingServices.Primitives.Address;
 using PostingServices.Orders;
 using PostingServices.Primitives.Location;
+using Infrastructure.Constants;
+using System.Device.Location;
 
 namespace PostingServices
 {
@@ -39,8 +41,8 @@ namespace PostingServices
             Address receiverAddress = new Address("Sofia", "Gorno nanadolnishte", 10);
             Receiver receiver = new Receiver("Gosho", "+88888+", receiverAddress);
 
-            PostOffice officeSofia = new PostOffice("HQ Sofia", new Location(0, 0));
-            PostOffice officeBurgas = new PostOffice("HQ Burgas", new Location(400, 25));
+            PostOffice officeSofia = new PostOffice("HQ Sofia", CityLocations.sofia);
+            PostOffice officeBurgas = new PostOffice("HQ Burgas", CityLocations.burgas);
             string text = "Hope this thing works";
 
             Shipment shipment = new Letter(sender, receiver, officeSofia, officeBurgas, DeliveryType.TheFlash, PaperSize.A4, text);
