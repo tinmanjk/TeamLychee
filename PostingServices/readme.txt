@@ -8,6 +8,7 @@
 
 **** feel free to add more ****
 
+- !!! rename namespaces and take care of references accordingly !!!
 - made working for sending, delivery time needs to be fixed
 - have to write properties for most of the classes
 - optimize code (since looking a bit badly now)
