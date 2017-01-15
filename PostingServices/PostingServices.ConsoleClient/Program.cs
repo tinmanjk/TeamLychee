@@ -3,6 +3,7 @@
     using System;
     using TimeWalkerUtility;
     using PostEngineUtility;
+    using PostingServices.Orders;
 
     class Program
     {
@@ -37,14 +38,14 @@
 
                 if (keyinfo.Key == ConsoleKey.N)
                 {
-                    tw.MoveTimeSlower();
+                    //tw.MoveTimeSlower();
                     // new order
-                    PostEngine.UpdateScreen(tw.GetCurrentTime());
+                    Order order = new Order();
+                    order.ShipmentDelivered();
+                    //PostEngine.UpdateScreen(tw.GetCurrentTime());
                 }
 
             } while (keyinfo.Key != ConsoleKey.Q);
-
-
 
 
             // post offices are defined manually, can be kept in a file (might not be the best option)

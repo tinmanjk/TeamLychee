@@ -41,6 +41,7 @@
                 //else if-s for other delivery types
             }
         }
+
         //property to calculate price
 
 
@@ -51,6 +52,12 @@
             this.ID = IDGenerator.GenerateUniqueID();
             this.price = 42;    // can calculate actual price via property based on dimensions or something else
             this.DeliveryDate = DateTime.Now;
+            this.Delivery += this.HandleEvent;
+        }
+
+        public Order()
+        {
+            this.Delivery += this.HandleEvent;
         }
 
         public override string ToString()
@@ -96,5 +103,17 @@
                 return dateSent.Add(timeTaken);
             }
         }
+
+        public event EventHandler Delivery;
+
+        public void ShipmentDelivered()
+        {
+            Delivery?.Invoke(this, EventArgs.Empty);
+        }
+        public void HandleEvent(object order, EventArgs args)
+        {
+            Console.WriteLine("Order is delivered");
+        }
+
     }
 }
