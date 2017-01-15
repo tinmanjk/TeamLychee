@@ -7,3 +7,7 @@
 - think of implementation of some type of events (for notification or something else)
 
 **** feel free to add more ****
+
+- made working for sending, delivery time needs to be fixed
+- have to write properties for most of the classes
+- optimize code (since looking a bit badly now)

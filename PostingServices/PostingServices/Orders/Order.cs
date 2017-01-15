@@ -31,9 +31,11 @@ namespace PostingServices.Orders
                     int deliveryMonth = this.shipment.DateSent.Month;
                     int deliveryDay = this.shipment.DateSent.Day;
                     
+                    // use a timespan instead as it might be easier
+
                     int deliveryHour = this.shipment.DateSent.Hour;
                     int deliveryMinute = this.shipment.DateSent.Minute + 5;  //5 min delivery
-
+                    // throws an exception when minutes are over 55
                     this.deliveryDate = new DateTime(deliveryYear, deliveryMonth, deliveryDay, deliveryHour, deliveryMinute, 0);
                 }
                 //else if-s for other delivery types
@@ -49,7 +51,26 @@ namespace PostingServices.Orders
             this.ID = uniqueID;
             uniqueID++;
             this.price = 42;    // can calculate actual price via property based on dimensions or something else
+            this.DeliveryDate = DateTime.Now;
         }
 
+        public Order(Shipment shipment, uint ID)
+        {
+            this.shipment = shipment;
+            this.ID = ID;
+            this.price = 42;
+        }   // custom constructor when we need to assign the ID(ex. loading from a file)
+
+        public override string ToString()
+        {
+            // full description can be added after all properties get implemented
+            StringBuilder result = new StringBuilder();
+            result.Append($"ID: {this.ID} \n");
+            result.Append($"Delivery type: {this.shipment.DeliveryType} \n");
+            result.Append($"Sent on: {this.shipment.DateSent} \n");
+            result.Append($"Estimated delivery: {this.DeliveryDate} \n");
+
+            return result.ToString();
+        }
     }
 }

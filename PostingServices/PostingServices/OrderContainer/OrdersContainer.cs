@@ -7,42 +7,33 @@ using PostingServices.Orders;
 
 namespace PostingServices.OrderContainer
 {
-    public class OrdersContainer
+    public static class OrdersContainer
     {
         //in case orders are kept in a file(table,sql,txt etc)
         //might add method to load them into the private list
 
         //fields
-        private List<Order> orders;
+        private static List<Order> orders = new List<Order>();
 
         //properties
-        public List<Order> Orders
+        public static List<Order> Orders
         {
             get
             {
-                return new List<Order>(this.orders);
+                return new List<Order>(orders);
             }
             private set
             {
-                this.orders = value;
+                orders = value;
             }
         }
 
         //constructors
-        public OrdersContainer()
-        {
-            this.Orders = new List<Order>();
-        }
 
         //methods
-        public void AddOrder(Order order)
+        public static void AddOrder(Order order)
         {
-            this.orders.Add(order);
-        }
-
-        public void RemoveOrder(Order order)
-        {
-            this.orders.Remove(order);
+            orders.Add(order);
         }
     }
 }

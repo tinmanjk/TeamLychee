@@ -46,5 +46,15 @@ namespace PostingServices.Shipments
             this.deliveryType = deliveryType;
             this.dateSent = DateTime.Now;
         }
+
+        public Shipment(Sender sender, Receiver receiver, PostOffice sentFrom, PostOffice sentTo, DeliveryType deliveryType, DateTime sentOn)
+        {
+            this.sender = sender;
+            this.receiver = receiver;
+            this.officeSentFrom = sentFrom;
+            this.officeSentTo = sentTo;
+            this.deliveryType = deliveryType;
+            this.dateSent = sentOn;
+        }   //custom defined dateTime
     }
 }

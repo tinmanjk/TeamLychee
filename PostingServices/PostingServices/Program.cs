@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PostingServices.People;
+using PostingServices.Shipments;
+using PostingServices.Addresses;
+using PostingServices.PostOffices;
+using PostingServices.Structs;
+using PostingServices.Enums;
+using PostingServices.OrderContainer;
+
 
 namespace PostingServices
 {
@@ -30,6 +38,26 @@ namespace PostingServices
             //
             // * can add a few more types of shipments in order to get the required number of classes/depth of inheritance
             // *         
+
+            Sender sender = new Sender("Gosho Sender", "+359888888");
+            Address receiverAddress = new Address("Sofia", "Gorno nanadolnishte", 10);
+            Receiver receiver = new Receiver("Gosho", "+88888+", receiverAddress);
+
+            PostOffice officeSofia = new PostOffice("HQ Sofia", new Location(0, 0));
+            PostOffice officeBurgas = new PostOffice("HQ Burgas", new Location(400, 25));
+            string text = "Hope this thing works";
+
+            Shipment shipment = new Letter(sender, receiver, officeSofia, officeBurgas, DeliveryType.TheFlash, PaperSize.A4, text);
+            sender.SendShipment(shipment);
+            sender.SendShipment(shipment);
+
+            Console.WriteLine("Orders:");
+            foreach (var item in OrdersContainer.Orders)
+            {
+                Console.WriteLine(item);
+            }
+            
+            //Shipment shipmentToSend = new Shipment(sender, receiver, ...)
         }
     }
 }
