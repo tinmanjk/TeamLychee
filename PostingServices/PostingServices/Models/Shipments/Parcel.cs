@@ -5,6 +5,8 @@
     using PostingServices.Core.Models.Shipment.Abstract;
     using Primitives.Dimensions;
     using Infrastructure.Enumerations;
+    using System.Text;
+    using System;
 
     class Parcel : Shipment
     {
@@ -21,6 +23,16 @@
             this.content = content;
         }
 
-        
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+
+            result.AppendFormat("Type: Parcel\n");
+            result.AppendFormat("Dimensions: \n{0}\n", this.dimensions);
+            result.AppendFormat("Content: {0}\n", this.content);
+
+            return result.ToString() + base.ToString();
+        }
+
     }
 }

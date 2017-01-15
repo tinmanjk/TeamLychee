@@ -2,6 +2,7 @@
 {
 
     using System;
+    using System.Text;
     using PostingServices.People;
     using PostingServices.PostOffices;
     using Infrastructure.Enumerations;
@@ -68,7 +69,7 @@
             this.dateSent = DateTime.Now;
         }
 
-        public Shipment(Sender sender, Receiver receiver, PostOffice sentFrom, PostOffice sentTo, DeliveryType deliveryType, DateTime sentOn)
+        /*public Shipment(Sender sender, Receiver receiver, PostOffice sentFrom, PostOffice sentTo, DeliveryType deliveryType, DateTime sentOn)
         {
             this.sender = sender;
             this.receiver = receiver;
@@ -76,6 +77,19 @@
             this.officeSentTo = sentTo;
             this.deliveryType = deliveryType;
             this.dateSent = sentOn;
-        }   //custom defined dateTime
+        }   //custom defined dateTime*/
+
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+            result.Append(String.Format("*Sender:\n{0}\n", this.sender));
+            result.Append(String.Format("*Receiver:\n{0}\n", this.receiver));
+            result.Append(String.Format("*Office sent from:\n{0}\n", this.OfficeSentFrom));
+            result.Append(String.Format("*Office sent to:\n{0}\n", this.OfficeSentTo));
+            result.Append(String.Format("*Delivery type:\n{0}\n", this.deliveryType));
+            result.Append(String.Format("*Sent on:\n{0}\n", this.DateSent));
+
+            return result.ToString();
+        }
     }
 }

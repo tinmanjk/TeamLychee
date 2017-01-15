@@ -32,6 +32,7 @@
             Console.WriteLine(sbHeader.ToString());
 
             // Here be log
+            // possibly printing of delivered packages
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();

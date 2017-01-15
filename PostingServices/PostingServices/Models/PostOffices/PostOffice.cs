@@ -3,6 +3,8 @@
     using PostingServices.Primitives.Location;
     using Infrastructure.Constants;
     using System.Device.Location;
+    using System;
+    using System.Text;
 
     public class PostOffice
     {
@@ -27,6 +29,13 @@
         {
             this.name = name;
             this.location = location;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+            result.AppendFormat("Office name: {0}\n", this.name);
+            return result.ToString();
         }
     }
 }

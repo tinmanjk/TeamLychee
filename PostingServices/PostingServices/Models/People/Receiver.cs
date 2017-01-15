@@ -13,5 +13,10 @@ namespace PostingServices.People
         {
             this.address = address;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + string.Format("Address: {0}\n");
+        }
     }
 }

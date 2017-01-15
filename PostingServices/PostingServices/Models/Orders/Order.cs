@@ -14,6 +14,7 @@
         private Shipment shipment;
         private DateTime deliveryDate;
         private double price;
+        private bool isDelivered;
 
         //properties
         public DateTime DeliveryDate
@@ -56,10 +57,9 @@
         {
             // full description can be added after all properties get implemented
             StringBuilder result = new StringBuilder();
-            result.Append($"ID: {this.ID} \n");
-            result.Append($"Delivery type: {this.shipment.DeliveryType} \n");
-            result.Append($"Sent on: {this.shipment.DateSent} \n");
-            result.Append($"Estimated delivery: {this.CalculateDeliveryDate()} \n");
+            result.AppendFormat("- ID -- {0}\n", this.ID);
+            result.AppendFormat("{0}", this.shipment);
+            result.AppendFormat("Delivery date: {0}", this.CalculateDeliveryDate());
 
             return result.ToString();
         }

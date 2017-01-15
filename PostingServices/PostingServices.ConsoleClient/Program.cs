@@ -38,6 +38,7 @@
                 if (keyinfo.Key == ConsoleKey.N)
                 {
                     tw.MoveTimeSlower();
+                    // new order
                     PostEngine.UpdateScreen(tw.GetCurrentTime());
                 }
 
