@@ -45,9 +45,12 @@ namespace PostingServices
             PostOffice officeBurgas = new PostOffice("HQ Burgas", CityLocations.burgas);
             string text = "Hope this thing works";
 
-            Shipment shipment = new Letter(sender, receiver, officeSofia, officeBurgas, DeliveryType.TheFlash, PaperSize.A4, text);
-            sender.SendShipment(shipment);
-            sender.SendShipment(shipment);
+            Shipment shipment1 = new Letter(sender, receiver, officeSofia, officeBurgas, DeliveryType.TheFlash, PaperSize.A4, text);
+            Shipment shipment2 = new Letter(sender, receiver, officeSofia, officeBurgas, DeliveryType.Regular, PaperSize.A4, text);
+            Shipment shipment3 = new Letter(sender, receiver, officeSofia, officeBurgas, DeliveryType.Priority, PaperSize.A4, text);
+            sender.SendShipment(shipment1);
+            sender.SendShipment(shipment2);
+            sender.SendShipment(shipment3);
 
             Console.WriteLine("Orders:");
             foreach (var item in OrdersContainer.Orders)

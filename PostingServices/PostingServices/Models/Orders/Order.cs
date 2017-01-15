@@ -5,6 +5,7 @@
     using Infrastructure.Utils;
     using System;
     using System.Text;
+    using System.Device.Location;
 
     public class Order
     {
@@ -58,9 +59,42 @@
             result.Append($"ID: {this.ID} \n");
             result.Append($"Delivery type: {this.shipment.DeliveryType} \n");
             result.Append($"Sent on: {this.shipment.DateSent} \n");
-            result.Append($"Estimated delivery: {this.DeliveryDate} \n");
+            result.Append($"Estimated delivery: {this.CalculateDeliveryDate()} \n");
 
             return result.ToString();
+        }
+
+        public DateTime CalculateDeliveryDate()
+        {
+            DateTime dateSent = this.shipment.DateSent;
+            GeoCoordinate sending = this.shipment.OfficeSentFrom.Location;
+            GeoCoordinate receiving = this.shipment.OfficeSentTo.Location;
+            double distance = sending.GetDistanceTo(receiving) / 1000;
+
+            if (this.shipment.DeliveryType == DeliveryType.Regular)
+            {
+                double speed = 40; //subject to change (in km/h)
+                double hours = distance / speed;
+                TimeSpan timeTaken = new TimeSpan((int)hours, 0, 0);    //casting will round
+
+                return dateSent.Add(timeTaken);
+            }
+            else if(this.shipment.DeliveryType == DeliveryType.Priority)
+            {
+                double speed = 70; //kmh;
+                double hours = distance / speed;
+                TimeSpan timeTaken = new TimeSpan((int)hours, 0, 0);    //casting will round
+
+                return dateSent.Add(timeTaken);
+            }
+            else
+            {
+                double speed = 300;
+                double hours = distance / speed;
+                TimeSpan timeTaken = new TimeSpan((int)hours, 0, 0);
+
+                return dateSent.Add(timeTaken);
+            }
         }
     }
 }

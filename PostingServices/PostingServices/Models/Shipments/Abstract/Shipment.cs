@@ -32,6 +32,30 @@
             }
         }
 
+        public PostOffice OfficeSentFrom
+        {
+            get
+            {
+                return this.officeSentFrom;
+            }
+            private set
+            {
+                this.officeSentFrom = value;
+            }
+        }
+
+        public PostOffice OfficeSentTo
+        {
+            get
+            {
+                return this.officeSentTo;
+            }
+            private set
+            {
+                this.officeSentTo = value;
+            }
+        }
+
         //constructors
 
         public Shipment(Sender sender, Receiver receiver, PostOffice sentFrom, PostOffice sentTo, DeliveryType deliveryType)

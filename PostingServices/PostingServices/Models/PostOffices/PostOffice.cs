@@ -10,6 +10,17 @@
         private GeoCoordinate location;
 
         //properties
+        public GeoCoordinate Location
+        {
+            get
+            {
+                return this.location;
+            }
+            private set
+            {
+                this.location = value;
+            }
+        }
 
         //constructor
         public PostOffice(string name, GeoCoordinate location)
