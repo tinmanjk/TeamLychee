@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PostingServices.People;
-using PostingServices.PostOffices;
-using PostingServices.Enums;
-
-namespace PostingServices.Shipments
+﻿namespace PostingServices.Core.Models.Shipment.Abstract
 {
+
+    using System;
+    using PostingServices.People;
+    using PostingServices.PostOffices;
+    using global::Infrastructure.Enumerations;
+
     public abstract class Shipment
     {
         private Sender sender;

@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PostingServices.People;
-using PostingServices.Shipments;
-using PostingServices.Addresses;
 using PostingServices.PostOffices;
-using PostingServices.Structs;
-using PostingServices.Enums;
-using PostingServices.OrderContainer;
-
+using PostingServices.Core.Models.Shipment.Abstract;
+using PostingServices.Core.Models.Shipments;
+using Infrastructure.Enumerations;
+using PostingServices.Primitives.Address;
+using PostingServices.Orders;
+using PostingServices.Primitives.Location;
 
 namespace PostingServices
 {

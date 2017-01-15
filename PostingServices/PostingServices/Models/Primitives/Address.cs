@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PostingServices.Addresses
+﻿namespace PostingServices.Primitives.Address
 {
+
     public class Address    //make me struct
     {
         private string city;

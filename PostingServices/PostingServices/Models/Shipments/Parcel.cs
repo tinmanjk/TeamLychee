@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PostingServices.Structs;
-using PostingServices.People;
-using PostingServices.PostOffices;
-using PostingServices.Enums;
-
-namespace PostingServices.Shipments
+﻿namespace PostingServices.Core.Models.Shipments
 {
+    using PostingServices.People;
+    using PostingServices.PostOffices;
+    using PostingServices.Core.Models.Shipment.Abstract;
+    using Primitives.Dimensions;
+    using Infrastructure.Enumerations;
+
     class Parcel : Shipment
     {
         private Dimensions dimensions;

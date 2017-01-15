@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PostingServices.Structs;
-
-namespace PostingServices.PostOffices
+﻿namespace PostingServices.PostOffices
 {
+    using PostingServices.Primitives.Location;
+
     public class PostOffice
     {
         private string name;

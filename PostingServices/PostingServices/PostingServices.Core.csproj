@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IPackage.cs" />
     <Compile Include="Infrastructure\Enumerations\DeliveryType.cs" />
     <Compile Include="Infrastructure\Enumerations\PaperSize.cs" />
+    <Compile Include="Infrastructure\Utils\IDGenerator.cs" />
     <Compile Include="Models\Orders\Order.cs" />
     <Compile Include="Models\Orders\OrdersContainer.cs" />
     <Compile Include="Models\People\Abstract\Person.cs" />
@@ -66,10 +68,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contracts\" />
     <Folder Include="Infrastructure\Constants\" />
     <Folder Include="Infrastructure\Exceptions\" />
-    <Folder Include="Infrastructure\Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

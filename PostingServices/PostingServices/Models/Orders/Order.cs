@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PostingServices.Shipments;
-using PostingServices.Enums;
-
-namespace PostingServices.Orders
+﻿namespace PostingServices.Orders
 {
+    using Core.Models.Shipment.Abstract;
+    using Infrastructure.Enumerations;
+    using System;
+    using System.Text;
+
     public class Order
     {
         private static uint uniqueID = 1;
@@ -25,12 +22,12 @@ namespace PostingServices.Orders
             }
             private set
             {
-                if(this.shipment.DeliveryType == DeliveryType.TheFlash)
+                if (this.shipment.DeliveryType == DeliveryType.TheFlash)
                 {
                     int deliveryYear = this.shipment.DateSent.Year;
                     int deliveryMonth = this.shipment.DateSent.Month;
                     int deliveryDay = this.shipment.DateSent.Day;
-                    
+
                     // use a timespan instead as it might be easier
 
                     int deliveryHour = this.shipment.DateSent.Hour;
@@ -42,7 +39,7 @@ namespace PostingServices.Orders
             }
         }
         //property to calculate price
-        
+
 
         //constructors
         public Order(Shipment shipment)

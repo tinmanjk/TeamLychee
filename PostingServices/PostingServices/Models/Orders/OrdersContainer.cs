@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PostingServices.Orders;
-
-namespace PostingServices.OrderContainer
+﻿namespace PostingServices.Orders
 {
+    using System.Collections.Generic;
+    
     public static class OrdersContainer
     {
         //in case orders are kept in a file(table,sql,txt etc)
