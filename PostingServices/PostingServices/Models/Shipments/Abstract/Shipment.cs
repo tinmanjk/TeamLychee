@@ -4,7 +4,7 @@
     using System;
     using PostingServices.People;
     using PostingServices.PostOffices;
-    using global::Infrastructure.Enumerations;
+    using Infrastructure.Enumerations;
 
     public abstract class Shipment
     {

@@ -2,13 +2,14 @@
 {
     using Core.Models.Shipment.Abstract;
     using Infrastructure.Enumerations;
+    using Infrastructure.Utils;
     using System;
     using System.Text;
 
     public class Order
     {
         private static uint uniqueID = 1;
-        private uint ID;
+        private int ID;
         private Shipment shipment;
         private DateTime deliveryDate;
         private double price;
@@ -45,18 +46,10 @@
         public Order(Shipment shipment)
         {
             this.shipment = shipment;
-            this.ID = uniqueID;
-            uniqueID++;
+            this.ID = IDGenerator.GenerateUniqueID();
             this.price = 42;    // can calculate actual price via property based on dimensions or something else
             this.DeliveryDate = DateTime.Now;
         }
-
-        public Order(Shipment shipment, uint ID)
-        {
-            this.shipment = shipment;
-            this.ID = ID;
-            this.price = 42;
-        }   // custom constructor when we need to assign the ID(ex. loading from a file)
 
         public override string ToString()
         {
