@@ -5,8 +5,8 @@
     using System.Device.Location;
     using System;
     using System.Text;
-
-    public class PostOffice
+    using Core;
+    public class PostOffice:IPostOffice
     {
         private string name;
         private GeoCoordinate location;
@@ -23,12 +23,16 @@
                 this.location = value;
             }
         }
-
+        public string Name
+        {
+            get { return this.name; }
+            private set { }
+        }
         //constructor
         public PostOffice(string name, GeoCoordinate location)
         {
-            this.name = name;
-            this.location = location;
+            this.Name = name;
+            this.Location = location;
         }
 
         public override string ToString()

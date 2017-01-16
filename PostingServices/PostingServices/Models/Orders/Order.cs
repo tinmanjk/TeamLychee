@@ -6,8 +6,9 @@
     using System;
     using System.Text;
     using System.Device.Location;
+    using Core;
 
-    public class Order
+    public class Order : IOrder
     {
         private static uint uniqueID = 1;
         private int ID;

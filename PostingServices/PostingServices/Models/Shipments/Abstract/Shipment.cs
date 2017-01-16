@@ -7,7 +7,7 @@
     using PostingServices.PostOffices;
     using Infrastructure.Enumerations;
 
-    public abstract class Shipment
+    public abstract class Shipment:IShipment
     {
         private Sender sender;
         private Receiver receiver;

@@ -1,16 +1,35 @@
 ﻿namespace PostingServices.Primitives.Dimensions
 {
+    using Core;
     using Infrastructure;
     using Infrastructure.Constants;
     using System;
     using System.Text;
 
-    public struct Dimensions
+    public struct Dimensions:IDimensions
     {
-        double width;
-        double height;
-        double length;
-        double weight;
+        private double width;
+        private double height;
+        private double length;
+        private double weight;
+
+        public double Width
+        {
+            get { return this.width; }
+        }
+        public double Height
+        {
+            get { return this.height; }
+        }
+        public double Length
+        {
+            get { return this.length; }
+        }
+        public double Weight
+        {
+            get { return this.weight; }
+        }
+
 
         public Dimensions(double width, double height, double length, double weight)
         {

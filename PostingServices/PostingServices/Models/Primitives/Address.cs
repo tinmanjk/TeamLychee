@@ -1,16 +1,33 @@
 ﻿namespace PostingServices.Primitives.Address
 {
+    using Core;
     using Infrastructure;
     using Infrastructure.Constants;
     using System;
     using System.Text;
-    public struct Address    //make me struct
+    public struct Address:IAddress    //make me struct
     {
         private string city;
         private string streetName;
         private int streetNumber;
 
         // add properties
+        public string City
+        {
+            get { return this.city; }
+        }
+        public string StreetName
+        {
+            get { return this.streetName; }
+            private set { }
+        }
+        public int StreetNumber
+        {
+            get { return this.streetNumber; }
+
+        }
+
+
 
         public Address(string city, string streetName, int streetNumber)
         {

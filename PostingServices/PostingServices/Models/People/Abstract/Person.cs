@@ -5,8 +5,8 @@
     using System.Text;
     using Infrastructure;
     using Infrastructure.Constants;
-
-    public abstract class Person
+    using Core;
+    public abstract class Person: IPerson
     {
         //fields
         private string firstName;

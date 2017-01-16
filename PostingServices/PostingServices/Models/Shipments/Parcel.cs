@@ -8,19 +8,31 @@
     using System.Text;
     using System;
 
-    class Parcel : Shipment
+    class Parcel : Shipment, IParcel
     {
         private Dimensions dimensions;
         private string content;
 
         //properties
 
+        public Dimensions Dimensions
+        {
+            get { return this.dimensions; }
+            private set { }
+        }
+        public string Content
+        {
+            get { return this.content; }
+            private set { }
+
+        }
+
         //constructors
         public Parcel(Sender sender, Receiver receiver, PostOffice sentFrom, PostOffice sentTo, DeliveryType deliveryType, Dimensions dimensions, string content)
             :base(sender, receiver, sentFrom, sentTo, deliveryType)
         {
-            this.dimensions = dimensions;
-            this.content = content;
+            this.Dimensions = dimensions;
+            this.Content = content;
         }
 
         public override string ToString()
