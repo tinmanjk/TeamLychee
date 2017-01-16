@@ -3,9 +3,9 @@
 
     public enum PaperSize
     {
-        A1,
-        A2,
-        A3,
+        DL,
+        A6,
+        A5,
         A4  
     }
 }

@@ -9,7 +9,8 @@ namespace PostingServices.People
 
         //add address property
 
-        public Receiver(string name, string phoneNumber, Address address) : base(name, phoneNumber)
+        public Receiver(string firstname,string lastname, string phoneNumber, Address address) 
+            :base(firstname,lastname, phoneNumber)
         {
             this.address = address;
         }

@@ -5,7 +5,8 @@
 
     public class Sender : Person
     {
-        public Sender(string name, string phoneNumber) : base(name,phoneNumber)
+        public Sender(string firstname, string lastname, string phoneNumber)
+            : base(firstname, lastname, phoneNumber)
         {
             //might add some fields,properties etc
         }

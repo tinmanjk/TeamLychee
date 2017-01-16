@@ -1,5 +1,7 @@
 ﻿namespace PostingServices.Primitives.Dimensions
 {
+    using Infrastructure;
+    using Infrastructure.Constants;
     using System;
     using System.Text;
 
@@ -16,6 +18,7 @@
             this.height = height;
             this.length = length;
             this.weight = weight;
+            ValidateFields();
         }
 
         public override string ToString()
@@ -28,6 +31,26 @@
             result.AppendFormat("Weight: {0}\n", this.weight);
 
             return result.ToString();
+        }
+        private void ValidateFields()
+        {
+
+            Validator.ValidateNull(this.width, string.Format(ErrorMsgs.PropertyCannotBeNull, "Width"));
+            Validator.ValidateDoubleRange(this.width, ErrorMsgs.MinWidth, ErrorMsgs.MaxWidth,
+                string.Format(ErrorMsgs.StringMustBeBetweenMinAndMax, "Width", ErrorMsgs.MinWidth, ErrorMsgs.MaxWidth));
+
+            Validator.ValidateNull(this.height, string.Format(ErrorMsgs.PropertyCannotBeNull, "Height"));
+            Validator.ValidateDoubleRange(this.height, ErrorMsgs.MinHeight, ErrorMsgs.MaxHeight,
+                string.Format(ErrorMsgs.StringMustBeBetweenMinAndMax, "Height", ErrorMsgs.MinHeight, ErrorMsgs.MaxHeight));
+
+            Validator.ValidateNull(this.length, string.Format(ErrorMsgs.PropertyCannotBeNull, "Length"));
+            Validator.ValidateDoubleRange(this.length, ErrorMsgs.MinLength, ErrorMsgs.MaxLength,
+                string.Format(ErrorMsgs.StringMustBeBetweenMinAndMax, "Length", ErrorMsgs.MinLength, ErrorMsgs.MaxLength));
+
+            Validator.ValidateNull(this.weight, string.Format(ErrorMsgs.PropertyCannotBeNull, "Weight"));
+            Validator.ValidateDoubleRange(this.weight, ErrorMsgs.MinWeight, ErrorMsgs.MaxCityNameLength,
+                string.Format(ErrorMsgs.StringMustBeBetweenMinAndMax, "Weight", ErrorMsgs.MinCityNameLength, ErrorMsgs.MinWeight));
+
         }
     }
 }
