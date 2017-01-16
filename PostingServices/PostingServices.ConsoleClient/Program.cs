@@ -1,9 +1,10 @@
-﻿namespace PostingServices
+﻿using System;
+using PostingServices.Core.Infrastructure.Utils;
+using PostingServices.Core.Models.Orders;
+
+namespace PostingServices
 {
-    using System;
-    using TimeWalkerUtility;
-    using PostEngineUtility;
-    using PostingServices.Orders;
+
 
     class Program
     {

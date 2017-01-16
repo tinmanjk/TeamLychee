@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PostingServices.ConsoleClient")]
+[assembly: AssemblyTitle("PostingServices.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PostingServices.ConsoleClient")]
+[assembly: AssemblyProduct("PostingServices.Core")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("91062930-cab0-49d6-a670-2d6785a91c30")]
+[assembly: Guid("c56decfb-94d9-469d-af95-12e469b5fed8")]
 
 // Version information for an assembly consists of the following four values:
 //
