@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Device.Location;
 using PostingServices.Core.Infrastructure.Utils;
+using PostingServices.Core.Infrastructure.Constants;
+using PostingServices.Core.Infrastructure.Enumerations;
 using PostingServices.Core.Models.Orders;
 using PostingServices.Core.Models.PostOffices;
-using PostingServices.Core.Infrastructure.Constants;
-using System.Device.Location;
-using PostingServices.Core.Infrastructure.Enumerations;
 using PostingServices.Core.Models.People;
 using PostingServices.Core.Models.Primitives;
 using PostingServices.Core.Models.Shipments;
@@ -18,7 +18,7 @@ namespace PostingServices
         static void Main()
         {
             ConsoleKeyInfo keyinfo;
-            TimeWalker tw = CurrentTime.timewalker;
+            TimeWalker tw = TimeWalker.Instance;
 
 
             PostEngine.StartUp(tw.GetCurrentTime());
@@ -26,14 +26,6 @@ namespace PostingServices
             do
             {
                 keyinfo = Console.ReadKey();
-                if (keyinfo.Key == ConsoleKey.D)
-                {
-                    Console.Clear();
-                    foreach (var order in OrdersContainer.Orders)
-                    {
-                        Console.WriteLine(order);
-                    }
-                }
 
                 if (keyinfo.Key == ConsoleKey.S)
                 {
@@ -42,6 +34,9 @@ namespace PostingServices
                     {
                         Console.WriteLine(order.ShortDetails);
                     }
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Press 'X' to go back");
                 }
                 if (keyinfo.Key == ConsoleKey.RightArrow)
                 {
@@ -100,24 +95,24 @@ namespace PostingServices
                     Console.WriteLine("Sending post-office");
                     string postOffice = Console.ReadLine();
                     PostOffice officeSentFrom;
-                    switch (postOffice)
+                    switch (postOffice.ToLower())
                     {
-                        case "Sofia":
+                        case "sofia":
                             officeSentFrom = new PostOffice("HQ Sofia", CityLocations.sofia);
                             break;
-                        case "Burgas":
+                        case "burgas":
                             officeSentFrom = new PostOffice("HQ Burgas", CityLocations.burgas);
                             break;
-                        case "Varna":
+                        case "varna":
                             officeSentFrom = new PostOffice("HQ Varna", CityLocations.varna);
                             break;
-                        case "Plovdiv":
+                        case "plovdiv":
                             officeSentFrom = new PostOffice("HQ Plovdiv", CityLocations.plovdiv);
                             break;
-                        case "Ruse":
+                        case "ruse":
                             officeSentFrom = new PostOffice("HQ Ruse", CityLocations.ruse);
                             break;
-                        case "Veliko Tarnovo":
+                        case "veliko tarnovo":
                             officeSentFrom = new PostOffice("HQ Veliko Tarnovo", CityLocations.velikoTarnovo);
                             break;
                         default:
@@ -127,34 +122,34 @@ namespace PostingServices
                     Console.WriteLine("Destination post-office:");
                     postOffice = Console.ReadLine();
                     PostOffice officeSentTo;
-                    switch (postOffice)
+                    switch (postOffice.ToLower())
                     {
-                        case "Sofia":
+                        case "sofia":
                             officeSentTo = new PostOffice("HQ Sofia", CityLocations.sofia);
                             break;
-                        case "Burgas":
+                        case "burgas":
                             officeSentTo = new PostOffice("HQ Burgas", CityLocations.burgas);
                             break;
-                        case "Varna":
+                        case "varna":
                             officeSentTo = new PostOffice("HQ Varna", CityLocations.varna);
                             break;
-                        case "Plovdiv":
+                        case "plovdiv":
                             officeSentTo = new PostOffice("HQ Plovdiv", CityLocations.plovdiv);
                             break;
-                        case "Ruse":
+                        case "ruse":
                             officeSentTo = new PostOffice("HQ Ruse", CityLocations.ruse);
                             break;
-                        case "Veliko Tarnovo":
+                        case "veliko tarnovo":
                             officeSentTo = new PostOffice("HQ Veliko Tarnovo", CityLocations.velikoTarnovo);
                             break;
                         default:
                             officeSentTo = new PostOffice("Middle of nowhere", new GeoCoordinate(0, 0));
                             break;
                     }
-                    Console.WriteLine("Delivery type [regular/priority/THEFLASH :");
+                    Console.WriteLine("Delivery type [regular/priority/THEFLASH] :");
                     string deliveryType = Console.ReadLine();
                     DeliveryType delivery;
-                    switch (deliveryType)
+                    switch (deliveryType.ToLower())
                     {
                         case "regular":
                             delivery = DeliveryType.Regular;
@@ -162,7 +157,7 @@ namespace PostingServices
                         case "priority":
                             delivery = DeliveryType.Priority;
                             break;
-                        case "THEFLASH":
+                        case "theflash":
                             delivery = DeliveryType.TheFlash;
                             break;
                         default:
@@ -173,9 +168,9 @@ namespace PostingServices
                     Console.WriteLine("Parcel/Letter:");
                     string shipmentType = Console.ReadLine();
                     Shipment shipment;
-                    switch (shipmentType)
+                    switch (shipmentType.ToLower())
                     {
-                        case "Parcel":
+                        case "parcel":
                             Console.WriteLine("Enter dimensions as follows Width, Height, Length, Weight:");
                             double width = double.Parse(Console.ReadLine());
                             double height = double.Parse(Console.ReadLine());
@@ -221,15 +216,19 @@ namespace PostingServices
 
                     if (OrdersContainer.Orders.Count == 0)
                     {
-                        Console.WriteLine("There are currently no orders");
+                        Console.WriteLine("  There are currently no orders");
                     }
                     else
                     {
                         foreach (var order in OrdersContainer.Orders)
                         {
-                            Console.WriteLine(order.ShortDetails);
+                            Console.WriteLine(order);
                         }
                     }
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Press 'X' to go back");
                 }
 
             } while (keyinfo.Key != ConsoleKey.Q);

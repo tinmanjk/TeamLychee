@@ -7,7 +7,6 @@ namespace PostingServices.Core.Infrastructure.Utils
 {
     public static class PostEngine
     {
-
         public static void StartUp(DateTime timestamp)
         {
             DrawScreen(timestamp);
@@ -17,8 +16,7 @@ namespace PostingServices.Core.Infrastructure.Utils
         {
             StringBuilder sbHeader = new StringBuilder();
             StringBuilder sbFooter = new StringBuilder();
-
-            // Warning! Ugly code here...
+                        
             // Header
             sbHeader.AppendLine(new String('#', 76))
               .AppendFormat("{0}{1,15}{0}", new String('#', 30), " POSTAL SERVICE ")
@@ -34,13 +32,12 @@ namespace PostingServices.Core.Infrastructure.Utils
             Console.WriteLine(sbHeader.ToString());
 
             // Here be log
-            // possibly printing of delivered packages
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             if(OrdersContainer.DeliveredOrders.Count == 0)
             {
-                Console.WriteLine("There are currently no delivered orders");
+                Console.WriteLine(" There are currently no delivered orders");
             }
             else
             {
@@ -58,13 +55,12 @@ namespace PostingServices.Core.Infrastructure.Utils
 
             // Footer
             sbFooter.AppendLine(new String('_', 76))
-                    .AppendLine(" TIME CONTROLS: \n")
+                    .AppendLine(" CONTROLS: \n")
                     .AppendLine("         * Press 'N' to submit a new Order")
                     .AppendLine("         * Press 'D' to view all orders(complete)")
                     .AppendLine("         * Press 'S' to view all orders(short)")
                     .AppendLine("         * Press '->' to step forward")
                     .AppendLine("         * Press '+' to increase step TimeSpan (by 3 hours)")
-                    .AppendLine("         * Press 'S' to view all orders(short)")
                     .AppendLine("         * Press 'X' to go back to the main windows")
                     .AppendLine("         * Press 'Q' to exit")
                     .Append("\n")

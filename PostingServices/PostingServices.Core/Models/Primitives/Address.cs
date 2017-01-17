@@ -41,7 +41,7 @@ namespace PostingServices.Core.Models.Primitives
         {
             StringBuilder result = new StringBuilder();
 
-            result.AppendFormat("City: {0}\n", this.city);
+            result.AppendFormat("\nCity: {0}\n", this.city);
             result.AppendFormat("Street: {0}\n", this.streetName);
             result.AppendFormat("Street number: {0}\n", this.streetNumber);
 

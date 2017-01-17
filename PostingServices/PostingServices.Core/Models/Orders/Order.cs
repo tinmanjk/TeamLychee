@@ -8,16 +8,13 @@ using PostingServices.Core.Infrastructure.Utils;
 
 namespace PostingServices.Core.Models.Orders
 {
-
-
     public class Order : IOrder
     {
-        private static uint uniqueID = 1;
+        //private static uint uniqueID = 1;
         private int ID;
         private Shipment shipment;
         private DateTime deliveryDate;
         private double price;
-        private bool isDelivered;
 
         //properties
         public DateTime DeliveryDate
@@ -40,6 +37,19 @@ namespace PostingServices.Core.Models.Orders
                 return this.ID;
             }
         }
+
+        public Shipment Shipment
+        {
+            get
+            {
+                return this.shipment;
+            }
+            private set
+            {
+                this.shipment = value;
+            }
+        }
+
         public string ShortDetails
         {
             get
@@ -49,19 +59,14 @@ namespace PostingServices.Core.Models.Orders
                     , this.Id, this.shipment.Sender.FirstName, this.shipment.Receiver.FirstName);
             }
         }
-        
-
-        //property to calculate price
-
 
         //constructors
         public Order(Shipment shipment)
         {
             this.shipment = shipment;
             this.ID = IDGenerator.GenerateUniqueID();
-            this.price = PriceCalculate();
+            this.price = PriceCalculate() / 12000;
             this.DeliveryDate = CalculateDeliveryDate();
-            //this.Delivery += this.HandleEvent;
         }
 
         public Order()
@@ -92,9 +97,13 @@ namespace PostingServices.Core.Models.Orders
         {
             // full description can be added after all properties get implemented
             StringBuilder result = new StringBuilder();
+
             result.AppendFormat("- ID -- {0}\n", this.ID);
             result.AppendFormat("{0}", this.shipment);
-            result.AppendFormat("Delivery date: {0}", this.CalculateDeliveryDate());
+            result.AppendFormat("Delivery date: {0}\n", this.CalculateDeliveryDate());
+            result.AppendFormat("Price: {0:F2}$", this.price);
+            result.AppendLine();
+            result.AppendLine("__________________________");
 
             return result.ToString();
         }

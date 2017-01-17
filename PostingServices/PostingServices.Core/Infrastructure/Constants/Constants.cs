@@ -20,6 +20,6 @@ namespace PostingServices.Core.Infrastructure.Constants
 
     public static class CurrentTime
     {
-        public static readonly TimeWalker timewalker = new TimeWalker();
+        public static readonly TimeWalker timewalker = TimeWalker.Instance;
     }
 }

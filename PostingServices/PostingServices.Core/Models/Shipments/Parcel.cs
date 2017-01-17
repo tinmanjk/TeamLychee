@@ -19,12 +19,12 @@ namespace PostingServices.Core.Models.Shipments
         public Dimensions Dimensions
         {
             get { return this.dimensions; }
-            private set { }
+            private set { this.dimensions = value; }
         }
         public string Content
         {
             get { return this.content; }
-            private set { }
+            private set { this.content = value; }
 
         }
 

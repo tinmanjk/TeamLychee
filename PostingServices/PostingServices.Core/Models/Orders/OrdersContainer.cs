@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using PostingServices.Core.Infrastructure.Constants;
 using PostingServices.Core.Infrastructure.Utils;
-using System;
 
 namespace PostingServices.Core.Models.Orders
 {
@@ -37,7 +37,7 @@ namespace PostingServices.Core.Models.Orders
         //constructors
         static OrdersContainer()
         {
-            publisher.TimeChanged += HandleTimeChange;
+            publisher.TimeChanged += HandleTimeChange;  //"subscribe"
         }
 
         //methods

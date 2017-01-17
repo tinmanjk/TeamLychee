@@ -25,7 +25,7 @@ namespace PostingServices.Core.Models.PostOffices
         public string Name
         {
             get { return this.name; }
-            private set { }
+            private set { this.name = value;  }
         }
         //constructor
         public PostOffice(string name, GeoCoordinate location)
