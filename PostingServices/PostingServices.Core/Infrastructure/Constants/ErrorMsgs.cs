@@ -19,7 +19,7 @@ namespace PostingServices.Core.Infrastructure.Constants
         public const int MaxStreetNameLength = 60;
 
         public const int MinStreetNumberLength = 1;
-        public const int MaxStreetNumberLength = 6;
+        public const int MaxStreetNumberLength = 999999;
 
         public const double MinWidth = 0.1;
         public const double MaxWidth = 2;

@@ -16,19 +16,18 @@ namespace PostingServices.Core.Models.Primitives
         public string City
         {
             get { return this.city; }
+            private set{this.city = value;}
         }
         public string StreetName
         {
             get { return this.streetName; }
-            private set { }
+            private set { this.streetName = value; }
         }
         public int StreetNumber
         {
             get { return this.streetNumber; }
-
+            private set { this.streetNumber = value; }
         }
-
-
 
         public Address(string city, string streetName, int streetNumber)
         {
@@ -60,8 +59,8 @@ namespace PostingServices.Core.Models.Primitives
                 string.Format(ErrorMsgs.StringMustBeBetweenMinAndMax, "Streetname", ErrorMsgs.MinStreetNameLength, ErrorMsgs.MaxStreetNameLength));
 
             Validator.ValidateNull(this.streetNumber, string.Format(ErrorMsgs.PropertyCannotBeNull, "Streetnumber"));
-            Validator.ValidateIntRange(this.streetNumber, ErrorMsgs.MinStreetNameLength, ErrorMsgs.MaxStreetNameLength,
-                string.Format(ErrorMsgs.StringMustBeBetweenMinAndMax, "Streetnumber", ErrorMsgs.MinStreetNameLength, ErrorMsgs.MaxStreetNameLength));
+            Validator.ValidateIntRange(this.streetNumber, ErrorMsgs.MinStreetNumberLength, ErrorMsgs.MaxStreetNumberLength,
+                string.Format(ErrorMsgs.StringMustBeBetweenMinAndMax, "Streetnumber", ErrorMsgs.MinStreetNumberLength, ErrorMsgs.MaxStreetNumberLength));
 
 
         }
