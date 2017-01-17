@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using PostingServices.Core.Models.Orders;
+using PostingServices.Core.Infrastructure.Constants;
 
 namespace PostingServices.Core.Infrastructure.Utils
 {
@@ -43,6 +44,7 @@ namespace PostingServices.Core.Infrastructure.Utils
             }
             else
             {
+                Console.WriteLine("Delivered orders by {0}", CurrentTime.timewalker.GetCurrentTime());
                 foreach (var order in OrdersContainer.DeliveredOrders)
                 {
                     Console.WriteLine(order.ShortDetails);
@@ -58,9 +60,12 @@ namespace PostingServices.Core.Infrastructure.Utils
             sbFooter.AppendLine(new String('_', 76))
                     .AppendLine(" TIME CONTROLS: \n")
                     .AppendLine("         * Press 'N' to submit a new Order")
+                    .AppendLine("         * Press 'D' to view all orders(complete)")
+                    .AppendLine("         * Press 'S' to view all orders(short)")
                     .AppendLine("         * Press '->' to step forward")
                     .AppendLine("         * Press '+' to increase step TimeSpan (by 3 hours)")
-                    .AppendLine("         * Press '-' to decrease step TimeSpan (by 3 hours)")
+                    .AppendLine("         * Press 'S' to view all orders(short)")
+                    .AppendLine("         * Press 'X' to go back to the main windows")
                     .AppendLine("         * Press 'Q' to exit")
                     .Append("\n")
                     .AppendLine(new String('#', 76));

@@ -26,9 +26,31 @@ namespace PostingServices
             do
             {
                 keyinfo = Console.ReadKey();
+                if (keyinfo.Key == ConsoleKey.D)
+                {
+                    Console.Clear();
+                    foreach (var order in OrdersContainer.Orders)
+                    {
+                        Console.WriteLine(order);
+                    }
+                }
+
+                if (keyinfo.Key == ConsoleKey.S)
+                {
+                    Console.Clear();
+                    foreach (var order in OrdersContainer.Orders)
+                    {
+                        Console.WriteLine(order.ShortDetails);
+                    }
+                }
                 if (keyinfo.Key == ConsoleKey.RightArrow)
                 {
                     tw.StepForward();
+                    PostEngine.UpdateScreen(tw.GetCurrentTime());                    
+                }
+
+                if (keyinfo.Key == ConsoleKey.X)
+                {
                     PostEngine.UpdateScreen(tw.GetCurrentTime());
                 }
 
