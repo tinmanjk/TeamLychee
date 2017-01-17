@@ -29,7 +29,7 @@ namespace PostingServices.Core.Models.Shipments
         public string Text
         {
             get { return this.text; }
-            private set { }
+            private set { this.text = value; }
         }
 
         //constructors

@@ -8,6 +8,8 @@ namespace PostingServices.Core.Infrastructure.Utils
         static TimeSpan defaultStep = new TimeSpan(0, 3, 0, 0); // Default three hours
         static TimeSpan defaultIncrementsTimeSpan = new TimeSpan(0, 3, 0, 0); // Default three hours
 
+        
+
         private DateTime startPoint;
         private TimeSpan timeStep;
         private DateTime currentDateTime;

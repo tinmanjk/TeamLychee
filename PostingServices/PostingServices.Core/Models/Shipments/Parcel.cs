@@ -9,7 +9,7 @@ using PostingServices.Core.Models.PostOffices;
 
 namespace PostingServices.Core.Models.Shipments
 {
-    class Parcel : Shipment, IParcel
+    public class Parcel : Shipment, IParcel
     {
         private Dimensions dimensions;
         private string content;
