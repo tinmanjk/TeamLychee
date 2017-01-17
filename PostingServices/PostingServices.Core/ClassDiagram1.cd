@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PostingServices.Core.Infrastructure.Constants.CityLocations" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAABAAAAAAAAAAAIAAAAAABAAQAAAAAQAA=</HashCode>
+      <FileName>Infrastructure\Constants\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Infrastructure.Constants.CurrentTime" Collapsed="true">
+    <Position X="9" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Constants\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Infrastructure.Constants.ErrorMsgs" Collapsed="true">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAICAEEAAgABIAAAEAAACAAAAAQCAQAAAUAAgAMBQ=</HashCode>
+      <FileName>Infrastructure\Constants\ErrorMsgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Infrastructure.Utils.IDGenerator" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAA=</HashCode>
+      <FileName>Infrastructure\Utils\IDGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Infrastructure.Utils.PostEngine" Collapsed="true">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Utils\PostEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Infrastructure.Utils.TimeWalker" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACkIACAAAAAAEgAAKAAAAAARAAAIAQAAAEEAAgJg=</HashCode>
+      <FileName>Infrastructure\Utils\TimeWalker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Infrastructure.Utils.Validator" Collapsed="true">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAEAAAAAAAAAAAIAAAAAAAAAAAABAAEAAEA=</HashCode>
+      <FileName>Infrastructure\Utils\Validator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Models.Orders.Order" Collapsed="true">
+    <Position X="0.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADCAAAAAAAgBAEBAAQAAQAAAAAAACAAAAAAAACCAg=</HashCode>
+      <FileName>Models\Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PostingServices.Core.Models.Orders.OrdersContainer" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAChAAAAAAAAAAgAAAiAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Orders\OrdersContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Models.People.Person" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAEBAAAAMAAAAQAAAEEEAAgAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\People\Abstract\Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PostingServices.Core.Models.People.Receiver" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAIAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\People\Receiver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PostingServices.Core.Models.People.Sender" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\People\Sender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PostingServices.Core.Models.PostOffices.PostOffice" Collapsed="true">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAQCAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PostOffices\PostOffice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PostingServices.Core.Models.Shipments.Shipment" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAAgQAAAIAAAAEAAAAAACAAAAEAAACBAAAAACIAAA=</HashCode>
+      <FileName>Models\Shipments\Abstract\Shipment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PostingServices.Core.Models.Shipments.Letter" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAACAAEAAAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>Models\Shipments\Letter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PostingServices.Core.Models.Shipments.Parcel" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAEAgAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Shipments\Parcel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="PostingServices.Core.Models.Primitives.Address" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAACMAAAICAAAAAAAAAAAAAAIAAAAAIA=</HashCode>
+      <FileName>Models\Primitives\Address.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Struct Name="PostingServices.Core.Models.Primitives.Dimensions" Collapsed="true">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABEAAAAQEQEAAAEBAACAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Primitives\Dimensions.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Interface Name="PostingServices.Core.Contracts.IAddress" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACMAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IAddress.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.IDimensions" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAEAAAAAEBAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IDimensions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.ILetter" Collapsed="true">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Contracts\ILetter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.IOrder" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAEBAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.IParcel" Collapsed="true">
+    <Position X="11.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IParcel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.IPerson" Collapsed="true">
+    <Position X="13.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAMAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IPerson.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.IPostOffice" Collapsed="true">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IPostOffice.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.IReceiver" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.ISender" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ISender.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PostingServices.Core.Contracts.IShipment" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAIAAAAEAAAAAACAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IShipment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PostingServices.Core.Infrastructure.Enumerations.DeliveryType" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Infrastructure\Enumerations\DeliveryType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PostingServices.Core.Infrastructure.Enumerations.PaperSize" Collapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAABAAAAAAAIgAAAA=</HashCode>
+      <FileName>Infrastructure\Enumerations\PaperSize.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
