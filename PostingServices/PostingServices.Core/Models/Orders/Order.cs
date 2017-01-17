@@ -59,7 +59,7 @@ namespace PostingServices.Core.Models.Orders
         {
             this.shipment = shipment;
             this.ID = IDGenerator.GenerateUniqueID();
-            this.price = 42;    // can calculate actual price via property based on dimensions or something else
+            this.price = PriceCalculate();
             this.DeliveryDate = CalculateDeliveryDate();
             //this.Delivery += this.HandleEvent;
         }
@@ -68,7 +68,26 @@ namespace PostingServices.Core.Models.Orders
         {
             this.Delivery += this.HandleEvent;
         }
+        public double PriceCalculate()
+        {
+            double typeIndex = 1;
+            //double sizeIndex = 1;
+            if ((int)this.shipment.DeliveryType == 0)
+            {
+                typeIndex = 1;
+            }
+            else if ((int)this.shipment.DeliveryType == 1)
+            {
+                typeIndex = 1.5;
+            }
+            else
+            {
+                typeIndex = 2;
+            }
+            double sizeIndex = (this.shipment is Letter) ? 1 : 2;
 
+            return price = this.shipment.OfficeSentTo.Location.GetDistanceTo(this.shipment.OfficeSentFrom.Location) / 5 * typeIndex * sizeIndex;
+        }
         public override string ToString()
         {
             // full description can be added after all properties get implemented
