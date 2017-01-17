@@ -28,10 +28,7 @@ namespace PostingServices.Core.Models.Orders
             }
             private set
             {
-                if (this.shipment.DeliveryType == DeliveryType.TheFlash)
-                {
-                    this.deliveryDate = value;
-                }
+                this.deliveryDate = value;
                 //else if-s for other delivery types
             }
         }
@@ -64,7 +61,7 @@ namespace PostingServices.Core.Models.Orders
             this.ID = IDGenerator.GenerateUniqueID();
             this.price = 42;    // can calculate actual price via property based on dimensions or something else
             this.DeliveryDate = CalculateDeliveryDate();
-            this.Delivery += this.HandleEvent;
+            //this.Delivery += this.HandleEvent;
         }
 
         public Order()
@@ -92,7 +89,7 @@ namespace PostingServices.Core.Models.Orders
 
             if (this.shipment.DeliveryType == DeliveryType.Regular)
             {
-                double speed = 40; //subject to change (in km/h)
+                double speed = 5; //subject to change (in km/h)
                 double hours = distance / speed;
                 TimeSpan timeTaken = new TimeSpan((int)hours, 0, 0);    //casting will round
 
@@ -100,7 +97,7 @@ namespace PostingServices.Core.Models.Orders
             }
             else if (this.shipment.DeliveryType == DeliveryType.Priority)
             {
-                double speed = 70; //kmh;
+                double speed = 10; //kmh;
                 double hours = distance / speed;
                 TimeSpan timeTaken = new TimeSpan((int)hours, 0, 0);    //casting will round
 

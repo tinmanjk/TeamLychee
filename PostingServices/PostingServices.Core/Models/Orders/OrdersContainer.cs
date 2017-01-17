@@ -49,7 +49,7 @@ namespace PostingServices.Core.Models.Orders
         public static IList<Order> GetDelivered()
         {
             var delivered = from order in OrdersContainer.orders
-                            where order.DeliveryDate <= CurrentTime.timewalker.GetCurrentTime()
+                            where order.DeliveryDate < CurrentTime.timewalker.GetCurrentTime()
                             select order;
 
             return delivered.ToList();
