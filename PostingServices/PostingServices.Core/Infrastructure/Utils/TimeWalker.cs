@@ -49,6 +49,7 @@ namespace PostingServices.Core.Infrastructure.Utils
 
         public DateTime StepForward()
         {
+            NotifyOfTimeChange(new EventArgs());
             return this.currentDateTime += this.currentStep;
         }
 
@@ -75,6 +76,16 @@ namespace PostingServices.Core.Infrastructure.Utils
         public override string ToString()
         {
             return String.Format("It is now: {0}", currentDateTime.ToString("dd.MM.yyyy HH:MM"));
+        }
+
+        public event EventHandler TimeChanged;
+
+        public void NotifyOfTimeChange(EventArgs e)
+        {
+            if(TimeChanged != null)
+            {
+                TimeChanged.Invoke(this, e);
+            }
         }
     }
 }

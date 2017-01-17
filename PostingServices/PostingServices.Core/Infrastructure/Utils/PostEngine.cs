@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using PostingServices.Core.Models.Orders;
 
 namespace PostingServices.Core.Infrastructure.Utils
 {
@@ -36,6 +37,17 @@ namespace PostingServices.Core.Infrastructure.Utils
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
+            if(OrdersContainer.DeliveredOrders.Count == 0)
+            {
+                Console.WriteLine("There are currently no delivered orders");
+            }
+            else
+            {
+                foreach (var order in OrdersContainer.DeliveredOrders)
+                {
+                    Console.WriteLine(order.ShortDetails);
+                }
+            }
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
