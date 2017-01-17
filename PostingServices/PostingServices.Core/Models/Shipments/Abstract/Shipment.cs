@@ -4,6 +4,7 @@ using PostingServices.Core.Contracts;
 using PostingServices.Core.Models.People;
 using PostingServices.Core.Models.PostOffices;
 using PostingServices.Core.Infrastructure.Enumerations;
+using PostingServices.Core.Infrastructure.Constants;
 
 
 namespace PostingServices.Core.Models.Shipments
@@ -58,6 +59,16 @@ namespace PostingServices.Core.Models.Shipments
             }
         }
 
+        public Sender Sender
+        {
+            get { return this.sender; }
+        }
+
+        public Receiver Receiver
+        {
+            get { return this.receiver; }
+        }
+
         //constructors
 
         public Shipment(Sender sender, Receiver receiver, PostOffice sentFrom, PostOffice sentTo, DeliveryType deliveryType)
@@ -67,7 +78,7 @@ namespace PostingServices.Core.Models.Shipments
             this.officeSentFrom = sentFrom;
             this.officeSentTo = sentTo;
             this.deliveryType = deliveryType;
-            this.dateSent = DateTime.Now;
+            this.dateSent = CurrentTime.timewalker.GetCurrentTime();
         }
 
         /*public Shipment(Sender sender, Receiver receiver, PostOffice sentFrom, PostOffice sentTo, DeliveryType deliveryType, DateTime sentOn)

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using PostingServices.Core.Infrastructure.Constants;
 
 namespace PostingServices.Core.Models.Orders
 {
@@ -29,6 +31,15 @@ namespace PostingServices.Core.Models.Orders
         public static void AddOrder(Order order)
         {
             orders.Add(order);
+        }
+
+        public static IList<string> DeliveredOrders()
+        {
+            var delivered = from order in OrdersContainer.orders
+                            where order.DeliveryDate <= CurrentTime.timewalker.GetCurrentTime()
+                            select order.ShortDetails;
+
+            return delivered.ToList();
         }
 
     }

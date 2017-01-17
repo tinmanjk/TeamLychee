@@ -30,20 +30,29 @@ namespace PostingServices.Core.Models.Orders
             {
                 if (this.shipment.DeliveryType == DeliveryType.TheFlash)
                 {
-                    int deliveryYear = this.shipment.DateSent.Year;
-                    int deliveryMonth = this.shipment.DateSent.Month;
-                    int deliveryDay = this.shipment.DateSent.Day;
-
-                    // use a timespan instead as it might be easier
-
-                    int deliveryHour = this.shipment.DateSent.Hour;
-                    int deliveryMinute = this.shipment.DateSent.Minute + 5;  //5 min delivery
-                    // throws an exception when minutes are over 55
-                    this.deliveryDate = new DateTime(deliveryYear, deliveryMonth, deliveryDay, deliveryHour, deliveryMinute, 0);
+                    this.deliveryDate = value;
                 }
                 //else if-s for other delivery types
             }
         }
+
+        public int Id
+        {
+            get
+            {
+                return this.ID;
+            }
+        }
+        public string ShortDetails
+        {
+            get
+            {
+                
+                return string.Format("ID: {0} -- Sender {1} -- Receiver {2} --\n"
+                    , this.Id, this.shipment.Sender.FirstName, this.shipment.Receiver.FirstName);
+            }
+        }
+        
 
         //property to calculate price
 
@@ -54,7 +63,7 @@ namespace PostingServices.Core.Models.Orders
             this.shipment = shipment;
             this.ID = IDGenerator.GenerateUniqueID();
             this.price = 42;    // can calculate actual price via property based on dimensions or something else
-            this.DeliveryDate = DateTime.Now;
+            this.DeliveryDate = CalculateDeliveryDate();
             this.Delivery += this.HandleEvent;
         }
 

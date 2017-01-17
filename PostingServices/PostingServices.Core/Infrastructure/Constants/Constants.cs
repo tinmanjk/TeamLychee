@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Device.Location;
+using PostingServices.Core.Infrastructure.Utils;
 
 namespace PostingServices.Core.Infrastructure.Constants
 {
@@ -15,5 +16,10 @@ namespace PostingServices.Core.Infrastructure.Constants
         public static readonly GeoCoordinate varna = new GeoCoordinate(43.2166700, 27.9166700);
         public static readonly GeoCoordinate velikoTarnovo = new GeoCoordinate(43.0812400, 25.6290400);
         public static readonly GeoCoordinate ruse = new GeoCoordinate(43.8563900, 25.9708300);
+    }
+
+    public static class CurrentTime
+    {
+        public static readonly TimeWalker timewalker = new TimeWalker();
     }
 }

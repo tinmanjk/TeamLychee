@@ -18,7 +18,7 @@ namespace PostingServices
         static void Main()
         {
             ConsoleKeyInfo keyinfo;
-            TimeWalker tw = new TimeWalker();
+            TimeWalker tw = CurrentTime.timewalker;
 
 
             PostEngine.StartUp(tw.GetCurrentTime());
@@ -191,6 +191,23 @@ namespace PostingServices
                     }
                     sender.SendShipment(shipment);
 
+                }
+
+                if (keyinfo.Key == ConsoleKey.D)
+                {
+                    Console.Clear();
+
+                    if (OrdersContainer.Orders.Count == 0)
+                    {
+                        Console.WriteLine("There are currently no orders");
+                    }
+                    else
+                    {
+                        foreach (var order in OrdersContainer.Orders)
+                        {
+                            Console.WriteLine(order.ShortDetails);
+                        }
+                    }
                 }
 
             } while (keyinfo.Key != ConsoleKey.Q);
